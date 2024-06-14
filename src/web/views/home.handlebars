@@ -1,0 +1,108 @@
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  body,
+  html {
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .app {
+    transform: scale(1.1);
+  }
+
+  .background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1920px;
+    height: 1080px;
+    z-index: 1;
+  }
+
+  #sinal {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1920px;
+    height: 1080px;
+    z-index: 5;
+  }
+
+  #postes {
+    position: absolute;
+    left: 299px;
+    top: 404px;
+    width: 1120px;
+    height: 560px;
+    z-index: 4;
+  }
+
+  #cego {
+    position: absolute;
+    left: -1000px;
+    top: 410px;
+    width: 1520px;
+    height: 855px;
+    z-index: 5;
+    transition: all 15s linear;
+  }
+
+  #carroHAnimado {
+    position: absolute;
+    left: 0;
+    top: -40px;
+    width: 1920px;
+    height: 1080px;
+    z-index: 3;
+    visibility: hidden;
+  }
+
+  #carroVAnimado {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1920px;
+    height: 1080px;
+    z-index: 3;
+    visibility: hidden;
+  }
+
+  #carroHParado {
+    position: absolute;
+    left: 1508px;
+    top: 739px;
+    width: 344px;
+    height: 154px;
+    z-index: 3;
+    visibility: visible;
+  }
+
+  button {
+    position: absolute;
+    top: 100px;
+  }
+</style>
+</head>
+
+<body>
+  <div class="app">
+    <img id="postes" src="Postes.png" alt="Postes">
+    <img id="background" class="background" src="Fundo.png" alt="Background">
+    <img id="sinal" src="sinal/3.png" alt="Sinal">
+    <img id="carroHAnimado" src="carros/horizontal.gif" alt="Carro Horizontal Animado">
+    <img id="carroHParado" src="carros/carroH1.png" alt="Carro Horizontal Parado">
+    <img id="carroVAnimado" src="carros/vertical.gif" alt="Carro Vertical Animado">
+    <img id="cego" src="cego/cego.gif" alt="Cego">
+    <audio id="verde" src="audios/0.mp3"></audio>
+    <audio audio id="vermelho" src="audios/1.mp3"></audio>
+    <audio id="tick" src="audios/tick.mp3"></audio>
+  </div>
+
+  <script id="handlebars" type="text/x-handlebars-template" tempoSeguro="{{{tempoSeguro}}}">
+    </script>
+  <script src="./js/main.js"></script>
+</body>
